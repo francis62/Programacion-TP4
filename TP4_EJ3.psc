@@ -1,37 +1,38 @@
 Algoritmo TP4_EJ3
-	//Desarrollar un algoritmo que permita obtener los números primos del
-	//rango de valores del 1 al 100. Cuando encuentre un número primo, lo
-	//deberá almacenar en un arreglo.
-	//Finalmente se deberá recorrer el arreglo, mostrar los números primos
-	//encontrados y en qué posición del arreglo se encuentra.
-	//Como ayuda se adjunta este algoritmo que se encarga de determinar si un
-	//número ingresado por el usuario es primo o no.
 	
-	Definir array_numero, numero_par,j Como Entero
-	//tamanio=100
-	j=0
-	Dimension array_numero[200]
+	Dimension array_primo[100];
+	definir num Como Entero;
+	definir num_div Como Entero;
+	definir indice Como Entero;
+	definir cont Como Entero;
+	definir exit como logico;
 	
-	//Almacenamos variables en el array
-	Para i<-1 Hasta 100 Con Paso 1 Hacer
-		Para n=i Hasta n Con Paso 1 Hacer 
-			Si n%i=0 Entonces
-				contador_div=contador_div+1
+	indice = 0;
+	Para num<-1 Hasta 100 Con Paso 1 Hacer
+		//Valores seteados para entrar de nuevo en el "mientras"
+		cont = 0;
+		num_div = 0;
+		exit = Falso;
+		//Bucle que identifica los numeros primos
+		Mientras exit == Falso Hacer
+			cont = cont+1;
+			//Condición donde sabemos por cuantos números se puede dividir.
+			si(num%cont == 0)Entonces
+				num_div = num_div+1;
+				//Condición que termina por encontrar el numero primo
+				si(num==cont y num_div == 2)Entonces
+					indice = indice+1;
+					array_primo[indice]<-num;
+					Escribir indice,") El primo es: ",array_primo[indice];
+					exit = Verdadero;
+				FinSi
 			FinSi
-		Fin Para
-		
-		Si contador_div==2 Entonces
-			n=array_numero[j]
-			j=j+1
-		FinSi
-		
+			//Condición que determina cuando un numero no es primo
+			si(num_div == 3 o num == 1)Entonces
+				exit=Verdadero;
+			FinSi
+		Fin Mientras
 	Fin Para
 	
-	
-	//Recorremos el array de los primeros 100 numeros pares
-	Para r<-0 Hasta 24 Con Paso 1 Hacer 
-		Escribir "Los primeros cien numeros primos son:"
-		Escribir array_numero[r]
-	Fin Para
 	
 FinAlgoritmo
