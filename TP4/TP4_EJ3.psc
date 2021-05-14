@@ -10,7 +10,7 @@ Algoritmo TP4_EJ3
 	Definir array_numero, numero_par,j Como Entero
 	//tamanio=100
 	j=0
-	Dimension array_numero[25]
+	Dimension array_numero[200]
 	
 	//Almacenamos variables en el array
 	Para i<-1 Hasta 100 Con Paso 1 Hacer
