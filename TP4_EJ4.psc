@@ -1,21 +1,18 @@
 Algoritmo TP4_EJ4
-	//Desarrollar un algoritmo que permita generar una contraseña aleatoria numérica de 8 dígitos. Para ello se deberá utilizar un arreglo de tamaño 8,
-	//que permita almacenar en cada una de sus posiciones los dígitos obtenidos de forma aleatoria.
-	//Finalmente se deberá recorrer nuevamente el arreglo para mostrar la contraseña obtenida. Para mostrar la contraseña en una instrucción
-	//Escribir, investigar acerca de las funciones concatenar() y convertiratexto().
 	Definir contrasenia, cadena_num0,cadena_num1,cadena_num2,cadena_num3,cadena_num4,cadena_num5,cadena_num6,cadena_num7 Como Caracter
+	Definir contrasenia0, contrasenia1,contrasenia2,contrasenia3 Como Caracter
 	Definir mitad_contrasenia0,mitad_contrasenia1 Como Caracter
 	Definir i Como Entero
 	Definir array_contrasenia Como Entero
 	Dimension array_contrasenia[8]
 	
 	Escribir "Bienvenido al programa generador de contraseñas para mayor seguridad"
-	Escribir "***"
+	Escribir "--"
 	Para i<-0 Hasta 7 Con Paso 1 Hacer
 		array_contrasenia[i]=Aleatorio(0,9)
 		Escribir array_contrasenia[i]
 	Fin Para
-	Escribir "***"
+	Escribir "--"
 
 	Para r<-0 Hasta 7 Con Paso 1 Hacer	
 		Segun r Hacer
